@@ -28,7 +28,6 @@ namespace ConsoleAppProject.App01
             Console.Write("Please enter the number of miles > ");
             string value = Console.ReadLine();
             miles = Convert.ToDouble(value);
-
         }
 
         /// <summary>
@@ -36,7 +35,7 @@ namespace ConsoleAppProject.App01
         /// </summary>
         private void CalculateFeet()
         {
-
+            feet = miles * 5280;
         }
 
         /// <summary>
@@ -44,7 +43,7 @@ namespace ConsoleAppProject.App01
         /// </summary>
         private void OutputFeet()
         {
-
+            Console.WriteLine(miles + " miles is " + feet + " feet.");
         }
 
     }
