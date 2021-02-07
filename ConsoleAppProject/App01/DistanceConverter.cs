@@ -9,15 +9,23 @@ namespace ConsoleAppProject.App01
     /// </author>
     public class DistanceConverter
     {
-        //Stage 1 attributes.
         private double miles;
         private double feet;
+        public const int FEET_IN_MILES = 5280;
 
         public void Run()
         {
+            OutputHeading();
             InputMiles();
-            CalculateFeet();
             OutputFeet();
+        }
+
+        private void OutputHeading()
+        {
+            Console.WriteLine("\n----------------------------------");
+            Console.WriteLine("        Convert Miles to Feet       ");
+            Console.WriteLine("          by Daniils Pucko          ");
+            Console.WriteLine("----------------------------------\n");
         }
 
         /// <summary>
