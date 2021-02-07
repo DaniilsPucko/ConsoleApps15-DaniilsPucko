@@ -17,6 +17,9 @@ namespace ConsoleAppProject.App01
         {
             OutputHeading();
             InputMiles();
+
+            feet = miles * FEET_IN_MILES;
+
             OutputFeet();
         }
 
