@@ -12,6 +12,7 @@ namespace ConsoleAppProject.App01
         private double miles;
         private double feet;
         public const int FEET_IN_MILES = 5280;
+        public const double METRES_IN_MILES = 1609.34;
 
         public void Run()
         {
