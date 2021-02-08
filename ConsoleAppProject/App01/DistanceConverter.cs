@@ -24,12 +24,19 @@ namespace ConsoleAppProject.App01
             OutputFeet();
         }
 
+        /// <summary>
+        /// Outputs heading of program and choices of converter.
+        /// </summary>
         private void OutputHeading()
         {
             Console.WriteLine("\n----------------------------------");
-            Console.WriteLine("        Convert Miles to Feet       ");
+            Console.WriteLine("         Distance Converter         ");
             Console.WriteLine("          by Daniils Pucko          ");
             Console.WriteLine("----------------------------------\n");
+            Console.WriteLine("CHOOSE WHAT YOU WANT TO CONVERT:");
+            Console.WriteLine("1: Miles to Feet.");
+            Console.WriteLine("2: Feet to Miles");
+            Console.WriteLine("3: Miles to Metres");
         }
 
         /// <summary>
