@@ -104,5 +104,39 @@ namespace ConsoleAppProject.App02
             MetresCalculator();
         }
 
+        ///prompts user to choose between feet and inches and to input their height.
+        private void FeetCalculator()
+        {
+            Console.WriteLine("Choose height units: ");
+            Console.WriteLine("1. Feet.");
+            Console.WriteLine("2. Inches.");
+            Console.Write("Enter your choice number > ");
+            string choice = Console.ReadLine();
+            Console.WriteLine("");
+            if(choice == "1")
+            {
+                Console.WriteLine("You have chosen feet.");
+                Console.Write("Enter your height in feet > ");
+                string height = Console.ReadLine();
+                feet = Convert.ToDouble(height);
+                inches = feet * INCHES_IN_FEET;
+                Console.WriteLine("");
+                BodyMassIndexCalculator();
+            }
+            else if(choice == "2")
+            {
+                Console.WriteLine("You have chosen inches.");
+                Console.Write("Enter your height in inches > ");
+                string height = Console.ReadLine();
+                inches = Convert.ToDouble(height);
+                Console.WriteLine("");
+                BodyMassIndexCalculator();
+            }
+            else
+            {
+                Console.WriteLine("You have entered wrong choice number. Try again.");
+                FeetCalculator();
+            }
+        }
     }
 }
