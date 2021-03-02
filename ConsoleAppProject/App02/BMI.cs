@@ -171,6 +171,7 @@ namespace ConsoleAppProject.App02
             IndexResult();
         }
 
+        ///outputs bmi result with description.
         private void IndexResult()
         {
             Console.WriteLine("Your body mass index was calculated.");
@@ -199,6 +200,15 @@ namespace ConsoleAppProject.App02
             {
                 Console.WriteLine("Your weight status is Obese Class 3. It can cause serious harm to your health");
             }
+            OutputResult();
+        }
+
+        ///outputs additional info about bmi.
+        private void OutputResult()
+        {
+            Console.WriteLine("If you are Black, Asian or other minority group, you have a higher risks.");
+            Console.WriteLine("Adults 23.0 or more are at increased risk.");
+            Console.WriteLine("Adults 27.5 or more are at high risk.")
         }
     }
 }
