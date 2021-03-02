@@ -173,7 +173,32 @@ namespace ConsoleAppProject.App02
 
         private void IndexResult()
         {
-
+            Console.WriteLine("Your body mass index was calculated.");
+            Console.WriteLine("It is " + index + " kg/m^2");
+            if (index <18.5)
+            {
+                Console.WriteLine("Depending on it, you are underweight. It can cause risks for your health.");
+            }
+            else if (index < 24.9)
+            {
+                Console.WriteLine("Your weight status is normal.");
+            }
+            else if (index < 29.9)
+            {
+                Console.WriteLine("Depending on it, you are overweight. It can cause risks for your health.");
+            }
+            else if (index < 34.9)
+            {
+                Console.WriteLine("Your weight status is Obese Class 1. It can cause serious harm to your health.");
+            }
+            else if (index < 39.9)
+            {
+                Console.WriteLine("Your weight status is Obese Class 2. It can cause serious harm to your health");
+            }
+            else
+            {
+                Console.WriteLine("Your weight status is Obese Class 3. It can cause serious harm to your health");
+            }
         }
     }
 }
