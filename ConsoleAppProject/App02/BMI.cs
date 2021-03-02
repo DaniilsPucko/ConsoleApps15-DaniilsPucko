@@ -101,6 +101,7 @@ namespace ConsoleAppProject.App02
             Console.Write("Enter your weight in KG > ");
             string weight = Console.ReadLine();
             kg = Convert.ToDouble(weight);
+            Console.WriteLine("");
             MetresCalculator();
         }
 
@@ -138,5 +139,16 @@ namespace ConsoleAppProject.App02
                 FeetCalculator();
             }
         }
+
+        ///prompts user to input their height in metres.
+        private void MetresCalculator()
+        {
+            Console.Write("Enter your height in metres > ");
+            string height = Console.ReadLine();
+            metres = Convert.ToDouble(height);
+            BodyMassIndexCalculator2();
+        }
+
+        
     }
 }
