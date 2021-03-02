@@ -95,9 +95,13 @@ namespace ConsoleAppProject.App02
             }
         }
 
+        ///prompts user to input their weight in kg.
         private void KGCalculator()
         {
-
+            Console.Write("Enter your weight in KG > ");
+            string weight = Console.ReadLine();
+            kg = Convert.ToDouble(weight);
+            MetresCalculator();
         }
 
     }
