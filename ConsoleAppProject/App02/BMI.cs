@@ -37,9 +37,41 @@ namespace ConsoleAppProject.App02
             Console.WriteLine("2. Metres & KG");
         }
 
+        ///Prompts user to input choice number and goes to needed method.
         private void ChooseUnits()
         {
             Console.Write("Please enter your choice number > ");
+            string choice = Console.ReadLine();
+            if (choice == "1") 
+            {
+                Console.WriteLine("You have chosen first method.");
+                PoundsCalculator();
+            }
+            else if (choice == "2")
+            {
+                Console.WriteLine("You have chosen second method.");
+                MetricCalculator();
+            }
+            else
+            {
+                Console.WriteLine("You have entered wrong number. Try again.");
+                ChooseUnits();
+            }
+        }
+
+        private void PoundsCalculator()
+        {
+            Console.WriteLine("Choose weight units: ");
+            Console.WriteLine("1. Stones");
+            Console.WriteLine("2. Pounds");
+            Console.Write("Enter your choice number > ");
+            string choice = Console.ReadLine();
+            if (choice == "1")
+            {
+                Console.WriteLine("");
+                Console.WriteLine("You have chosen stones.");
+                Console.Write("Enter your weight in stones > ")
+            }
         }
     }
 }
