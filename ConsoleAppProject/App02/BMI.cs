@@ -208,7 +208,7 @@ namespace ConsoleAppProject.App02
         {
             Console.WriteLine("If you are Black, Asian or other minority group, you have a higher risks.");
             Console.WriteLine("Adults 23.0 or more are at increased risk.");
-            Console.WriteLine("Adults 27.5 or more are at high risk.")
+            Console.WriteLine("Adults 27.5 or more are at high risk.");
         }
     }
 }
