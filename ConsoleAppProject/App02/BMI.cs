@@ -50,7 +50,7 @@ namespace ConsoleAppProject.App02
             else if (choice == "2")
             {
                 Console.WriteLine("You have chosen second method.");
-                MetricCalculator();
+                KGCalculator();
             }
             else
             {
@@ -59,6 +59,7 @@ namespace ConsoleAppProject.App02
             }
         }
 
+        ///prompts users to choose between stones and pounds and to enter their weight.
         private void PoundsCalculator()
         {
             Console.WriteLine("Choose weight units: ");
@@ -70,8 +71,34 @@ namespace ConsoleAppProject.App02
             {
                 Console.WriteLine("");
                 Console.WriteLine("You have chosen stones.");
-                Console.Write("Enter your weight in stones > ")
+                Console.Write("Enter your weight in stones > ");
+                string weight = Console.ReadLine();
+                stones = Convert.ToDouble(weight);
+                pounds = stones * POUNDS_IN_STONE;
+                Console.WriteLine("");
+                FeetCalculator();
+            }
+            else if (choice == "2")
+            {
+                Console.WriteLine("");
+                Console.WriteLine("You have chosen pounds.");
+                Console.Write("Enter your weight in pounds > ");
+                string weight = Console.ReadLine();
+                pounds = Convert.ToDouble(weight);
+                Console.WriteLine("");  
+                FeetCalculator();
+            }
+            else 
+            {
+                Console.WriteLine("You have entered wrong choice number, try again.");
+                PoundsCalculator();
             }
         }
+
+        private void KGCalculator()
+        {
+
+        }
+
     }
 }
