@@ -16,8 +16,10 @@ namespace ConsoleAppProject.App02
         private double stones;
         private double inches;
         private double feet;
+        private double index;
         public const double POUNDS_IN_STONE = 14;
         public const double INCHES_IN_FEET = 12;
+
 
         public void Run()
         {
@@ -149,6 +151,29 @@ namespace ConsoleAppProject.App02
             BodyMassIndexCalculator2();
         }
 
-        
+        ///calculates users bmi using pounds and inches.
+        private void BodyMassIndexCalculator()
+        {
+            Console.WriteLine("Your weight is " + pounds + " pounds.");
+            Console.WriteLine("Your height is " + inches + " inches.");
+            Console.WriteLine("Starting calculating process...");
+            index = (pounds * 703) / (inches * inches);
+            IndexResult();
+        }
+
+        ///calculates users bmi using metres and kg.
+        private void BodyMassIndexCalculator2()
+        {
+            Console.WriteLine("Your weight is " + kg + " kilograms.");
+            Console.WriteLine("Your height is " + metres + " metres.");
+            Console.WriteLine("Starting calculating process...");
+            index = kg / (metres*metres);
+            IndexResult();
+        }
+
+        private void IndexResult()
+        {
+
+        }
     }
 }
