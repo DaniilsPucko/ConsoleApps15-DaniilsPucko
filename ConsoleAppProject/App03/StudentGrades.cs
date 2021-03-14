@@ -49,6 +49,53 @@ namespace ConsoleAppProject.App03
         }
 
         /// <summary>
+        /// Runs the program.
+        /// </summary>
+        public void Run()
+        {
+            OutputHeading();
+            ChooseMethod();
+        }
+
+        /// <summary>
+        /// Outputs heading of an App.
+        /// </summary>
+        private void OutputHeading()
+        {
+            Console.WriteLine("Student Grades App");
+            Console.WriteLine("Choose what you want to do: ");
+            Console.WriteLine("1. Input Marks");
+            Console.WriteLine("2. Output Marks");
+            Console.WriteLine("3. Calculate Mean, Maximum and Minimum marks.");
+            Console.WriteLine("4. Calculate and Output Grade Profile.");
+            Console.Write("Choose option > ");
+        }
+
+        private void ChooseMethod()
+        {
+            string value = Console.ReadLine();
+            Console.WriteLine();
+            if (value == "1")
+            {
+                InputMarks();
+            }
+            else if (value == "2")
+            {
+                OutputMarks();
+            }
+            else if (value == "3")
+            {
+                CalculateStats();
+            }
+            else if (value == "4")
+            {
+                CalculateGradeProfile();
+            }
+            else Console.Write("Wrong choice number, try again > ");
+            ChooseMethod();
+        }
+
+        /// <summary>
         /// Input a mark between 0-100 for each student
         /// and store it in Marks array.
         /// </summary>
