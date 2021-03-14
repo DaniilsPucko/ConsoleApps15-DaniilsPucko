@@ -8,6 +8,7 @@ namespace ConsoleApp.Tests
     {
         private readonly StudentGrades converter = new StudentGrades();
 
+        [TestMethod]
         private void TestCovert0ToGradeF()
         {
             //Arrange
