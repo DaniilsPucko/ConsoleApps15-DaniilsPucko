@@ -54,7 +54,14 @@ namespace ConsoleAppProject.App03
         /// </summary>
         public void InputMarks()
         {
-            throw new NotImplementedException();
+            for (int i = 0; i <= Marks.Length; i++)
+            {
+                Console.Write(Students[i] + " mark > ");
+                string value = Console.ReadLine();
+                int mark = Convert.ToInt32(value);
+                Marks[i] = mark;
+                Console.WriteLine();
+            }
         }
 
         /// <summary>
@@ -63,7 +70,14 @@ namespace ConsoleAppProject.App03
         /// </summary>
         public void OutputMarks()
         {
-            throw new NotImplementedException();
+            for (int i = 0; i < Marks.Length; i++)
+            {
+                Console.WriteLine(Students[i] + " has mark " + Marks[i]);
+                int mark = Marks[i];
+                Console.Write("Grade : ");
+                ConvertToGrade(mark);
+                Console.WriteLine();
+            }
         }
 
         /// <summary>
@@ -113,6 +127,39 @@ namespace ConsoleAppProject.App03
             }
 
             Mean = total / Marks.Length;
+        }
+
+        /// <summary>
+        /// Calculates gradeprofile and toggles output of it.
+        /// </summary>
+        public void CalculateGradeProfile()
+        {
+            for(int i = 0; i<GradeProfile.Length; i++)
+            {
+                GradeProfile[i] = 0;
+            }
+
+            foreach(int mark in Marks)
+            {
+                Grades grade = ConvertToGrade(mark);
+                GradeProfile[(int)grade]++;
+            }
+            OutputGradeProfile();
+        }
+
+        private void OutputGradeProfile()
+        {
+            Grades grade = Grades.A;
+            Console.WriteLine();
+
+            foreach(int count in GradeProfile)
+            {
+                int percentage = count * 100 / Marks.Length;
+                Console.WriteLine($"Grade {grade} {percentage}% Count {count}");
+                grade++;
+            }
+
+            Console.WriteLine();
         }
     }
 }
