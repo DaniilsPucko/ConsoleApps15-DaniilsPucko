@@ -11,19 +11,18 @@ namespace ConsoleAppProject
         ///user, and they can select the choice number is returned.
         ///</summary>
         public static int SelectChoice(string[] choices)
-        {
-            ///Display all the choices.
-
-            int choiceNo = DisplayChoices(choices);
-
-            ///Get the users choice.
-
+        { 
+            DisplayChoices(choices);
             Console.Write("Please enter your choice > ");
             string value = Console.ReadLine();
-            choiceNo = Convert.ToInt32(value);
+            int choiceNo = Convert.ToInt32(value);
             return 0;
         }
 
+        /// <summary>
+        /// Displays choices.
+        /// </summary>
+        /// <param name="choices"></param>
         private static void DisplayChoices(string[] choices)
         {
             int choiceNo = 0;
