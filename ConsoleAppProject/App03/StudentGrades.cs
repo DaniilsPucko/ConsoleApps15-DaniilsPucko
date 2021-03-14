@@ -5,7 +5,7 @@ using System.Text;
 namespace ConsoleAppProject.App03
 {
     /// <summary>
-    /// 
+    /// Class, which defines methods for giving marks and grades to students.
     /// </summary>
     public class StudentGrades
     {
@@ -21,6 +21,9 @@ namespace ConsoleAppProject.App03
 
         public int Maximum { get; set; }
 
+        /// <summary>
+        /// constructor 
+        /// </summary>
         public StudentGrades()
         {
             Students = new string[]
