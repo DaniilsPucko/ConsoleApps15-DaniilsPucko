@@ -21,6 +21,8 @@ namespace ConsoleAppProject
 
         private static StudentGrades grades = new StudentGrades();
 
+        
+        
         public static DistanceConverter DistanceConverter
         {
             get => default;
@@ -28,7 +30,7 @@ namespace ConsoleAppProject
             {
             }
         }
-
+        
         public static void Main(string[] args)
         {
             Console.ForegroundColor = ConsoleColor.Yellow;
