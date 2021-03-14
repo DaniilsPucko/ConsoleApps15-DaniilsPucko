@@ -72,7 +72,7 @@ namespace ConsoleAppProject.App03
         }
 
         /// <summary>
-        /// Choose between features of the app
+        /// Choose between features of the appv
         /// </summary>
         private void ChooseMethod()
         {
