@@ -21,24 +21,10 @@ namespace ConsoleAppProject.App01
         /// </summary>
         public void Run()
         {
-            OutputHeading();
+            ConsoleHelper.OutputHeading("Distance Converter");
             ChooseConverter();
         }
 
-        /// <summary>
-        /// Outputs heading of program and choices of converter.
-        /// </summary>
-        private void OutputHeading()
-        {
-            Console.WriteLine("\n----------------------------------");
-            Console.WriteLine("         Distance Converter         ");
-            Console.WriteLine("          by Daniils Pucko          ");
-            Console.WriteLine("----------------------------------\n");
-            Console.WriteLine("Select distance unit to convert from:");
-            Console.WriteLine("1: Miles");
-            Console.WriteLine("2: Feet");
-            Console.WriteLine("3: Metres");
-        }
 
         /// <summary>
         /// Prompts user to select distance unit to convert from.
