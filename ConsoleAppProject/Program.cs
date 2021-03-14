@@ -35,7 +35,7 @@ namespace ConsoleAppProject
             {
                 calculator.ChooseUnits();
             }
-
+            else Console.WriteLine("Invalid choice.");
         }
     }
 }
