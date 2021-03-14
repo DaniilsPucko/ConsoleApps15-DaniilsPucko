@@ -24,6 +24,9 @@ namespace ConsoleAppProject
 
             ///Get the users choice.
 
+            Console.Write("Please enter your choice > ");
+            string value = Console.ReadLine();
+            choiceNo = Convert.ToInt32(value);
             return 0;
         }
 
