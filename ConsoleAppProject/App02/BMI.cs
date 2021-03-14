@@ -23,20 +23,8 @@ namespace ConsoleAppProject.App02
 
         public void Run()
         {
-            OutputHeading();
+            ConsoleHelper.OutputHeading("Body Mass Index Calculator");
             ChooseUnits();
-        }
-
-        ///Tells about a program and asks user to choose unit.
-        private void OutputHeading()
-        {
-            Console.WriteLine("-------------------------------------------");
-            Console.WriteLine("Body Mass Index Calculator by Daniils Pucko");
-            Console.WriteLine("    This program will calculate your BMI   ");
-            Console.WriteLine("  To Start choose units in which you will  ");
-            Console.WriteLine("      provide your height and weight.      ");
-            Console.WriteLine("1. Stones, pounds & feet, inches");
-            Console.WriteLine("2. Metres & KG");
         }
 
         ///Prompts user to input choice number and goes to needed method.
