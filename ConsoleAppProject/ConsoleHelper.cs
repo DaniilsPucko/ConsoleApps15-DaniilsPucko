@@ -14,13 +14,7 @@ namespace ConsoleAppProject
         {
             ///Display all the choices.
 
-            int choiceNo = 0;
-
-            foreach (string choice in choices)
-            {
-                choiceNo++;
-                Console.WriteLine($"     {choiceNo}.   {choice}");
-            }
+            int choiceNo = DisplayChoices(choices);
 
             ///Get the users choice.
 
@@ -28,6 +22,17 @@ namespace ConsoleAppProject
             string value = Console.ReadLine();
             choiceNo = Convert.ToInt32(value);
             return 0;
+        }
+
+        private static void DisplayChoices(string[] choices)
+        {
+            int choiceNo = 0;
+
+            foreach (string choice in choices)
+            {
+                choiceNo++;
+                Console.WriteLine($"     {choiceNo}.   {choice}");
+            }
         }
 
 
