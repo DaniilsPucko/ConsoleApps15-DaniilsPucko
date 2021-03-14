@@ -6,6 +6,28 @@ namespace ConsoleAppProject
 {
     public static class ConsoleHelper
     {
+        ///<summary>
+        ///This method displays a list of numbered choices to the
+        ///user, and they can select the choice number is returned.
+        ///</summary>
+        public static int SelectChoice(string[] choices)
+        {
+            ///Display all the choices.
+
+            int choiceNo = 0;
+
+            foreach (string choice in choices)
+            {
+                choiceNo++;
+                Console.WriteLine($"     {choiceNo}.   {choice}");
+            }
+
+            ///Get the users choice.
+
+            return 0;
+        }
+
+
         /// <summary>
         /// Outputs heading of program and choices of converter.
         /// </summary>
