@@ -24,5 +24,70 @@ namespace ConsoleApp.Tests
             Assert.AreEqual(expectedGrade, actualGrade);
         }
 
+        [TestMethod]
+        private void TestCovert40ToGradeD()
+        {
+            //Arrange
+
+            Grades expectedGrade = Grades.D;
+
+            //Act
+
+            Grades actualGrade = converter.ConvertToGrade(40);
+
+            //Assert
+
+            Assert.AreEqual(expectedGrade, actualGrade);
+        }
+
+        [TestMethod]
+        private void TestCovert50ToGradeC()
+        {
+            //Arrange
+
+            Grades expectedGrade = Grades.C;
+
+            //Act
+
+            Grades actualGrade = converter.ConvertToGrade(50);
+
+            //Assert
+
+            Assert.AreEqual(expectedGrade, actualGrade);
+        }
+
+        [TestMethod]
+        private void TestCovert60ToGradeB()
+        {
+            //Arrange
+
+            Grades expectedGrade = Grades.B;
+
+            //Act
+
+            Grades actualGrade = converter.ConvertToGrade(60);
+
+            //Assert
+
+            Assert.AreEqual(expectedGrade, actualGrade);
+        }
+
+        [TestMethod]
+        private void TestCovert70ToGradeA()
+        {
+            //Arrange
+
+            Grades expectedGrade = Grades.A;
+
+            //Act
+
+            Grades actualGrade = converter.ConvertToGrade(70);
+
+            //Assert
+
+            Assert.AreEqual(expectedGrade, actualGrade);
+        }
+
+
     }
 }
