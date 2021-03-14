@@ -71,6 +71,9 @@ namespace ConsoleAppProject.App03
             Console.Write("Choose option > ");
         }
 
+        /// <summary>
+        /// Choose between features of the app
+        /// </summary>
         private void ChooseMethod()
         {
             string value = Console.ReadLine();
