@@ -28,7 +28,7 @@ namespace ConsoleAppProject.App02
         }
 
         ///Prompts user to input choice number and goes to needed method.
-        private void ChooseUnits()
+        public void ChooseUnits()
         {
             Console.Write("Please enter your choice number > ");
             string choice = Console.ReadLine();
