@@ -8,6 +8,26 @@ namespace ConsoleApp.Tests
     {
         private readonly StudentGrades converter = new StudentGrades();
 
+        private int[] testMarks;
+
+        private TestStudentGrades()
+        {
+            testMarks = new int[]
+            {
+                10, 20, 30, 40, 50, 60, 70, 80, 90, 100
+            };
+        }
+
+        [TestMethod]
+        private void TestCalculateMean()
+        {
+            converter.Marks = testMarks;
+            double expectedMean = 55.0;
+            converter.CalculateStats();
+
+            Assert.AreEqual(expectedMean, converter.Mean);
+        }
+
         [TestMethod]
         private void TestCovert0ToGradeF()
         {
@@ -87,7 +107,5 @@ namespace ConsoleApp.Tests
 
             Assert.AreEqual(expectedGrade, actualGrade);
         }
-
-
     }
 }

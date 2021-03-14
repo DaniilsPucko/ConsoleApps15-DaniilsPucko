@@ -101,7 +101,18 @@ namespace ConsoleAppProject.App03
         /// </summary>
         public void CalculateStats()
         {
-            throw new NotImplementedException();
+            Minimum = Marks[0];
+            Maximum = Marks[0];
+            double total = 0;
+         
+            foreach(int mark in Marks)
+            {
+                if (mark < Minimum) Minimum = mark;
+                if (mark > Maximum) Maximum = mark;
+                total = total + mark;
+            }
+
+            Mean = total / Marks.Length;
         }
     }
 }
