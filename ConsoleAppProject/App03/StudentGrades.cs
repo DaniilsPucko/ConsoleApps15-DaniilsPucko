@@ -104,7 +104,7 @@ namespace ConsoleAppProject.App03
         /// </summary>
         public void InputMarks()
         {
-            for (int i = 0; i <= Marks.Length; i++)
+            for (int i = 0; i < Marks.Length; i++)
             {
                 Console.Write(Students[i] + " mark > ");
                 string value = Console.ReadLine();
