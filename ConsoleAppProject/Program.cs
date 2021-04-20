@@ -33,6 +33,20 @@ namespace ConsoleAppProject
             Console.WriteLine("1. DISTANCE CONVERTER");
             Console.WriteLine("2. BODY MASS INDEX CALCULATOR");
             Console.WriteLine("3. STUDENT GRADES APPLICATION");
+            Console.Write("Make your choice: ");
+            string value = Console.ReadLine();
+            if (value == "1")
+            {
+                converter.Run();
+            }
+            else if (value == "2")
+            {
+                calculator.Run();
+            }
+            else if (value =="3")
+            {
+                grades.Run();
+            }
         }
     }
 }
