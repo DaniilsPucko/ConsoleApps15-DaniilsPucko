@@ -21,37 +21,18 @@ namespace ConsoleAppProject
 
         private static StudentGrades grades = new StudentGrades();
 
-        
-        
-        public static DistanceConverter DistanceConverter
+        public static void Start()
         {
-            get => default;
-            set
-            {
-            }
+            Console.WriteLine("Welcome to ConsoleApp");
+            Console.WriteLine("MADE BY: DANIILS PUCKO");
+            Console.WriteLine("Choose what app you want to use: ");
         }
         
-        public static void Main(string[] args)
+        public static void ChoiceSelector()
         {
-            Console.ForegroundColor = ConsoleColor.Yellow;
-
-            ConsoleHelper.OutputHeading("BNU CO453 Applications Programming 2020-2021!");
-
-            string[] choices = { "Distance Converter", "BMI Calculator", "Student Grades" };
-            int choiceNo = ConsoleHelper.SelectChoice(choices);
-
-            if (choiceNo == 1)
-            {
-                converter.ChooseConverter();
-            }
-            else if (choiceNo == 2)
-            {
-                calculator.ChooseUnits();
-            }
-            else if (choiceNo == 3)
-            {
-                grades.Run();
-            }
+            Console.WriteLine("1. DISTANCE CONVERTER");
+            Console.WriteLine("2. BODY MASS INDEX CALCULATOR");
+            Console.WriteLine("3. STUDENT GRADES APPLICATION");
         }
     }
 }
