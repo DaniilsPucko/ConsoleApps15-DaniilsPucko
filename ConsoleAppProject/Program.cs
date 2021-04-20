@@ -26,6 +26,7 @@ namespace ConsoleAppProject
             Console.WriteLine("Welcome to ConsoleApp");
             Console.WriteLine("MADE BY: DANIILS PUCKO");
             Console.WriteLine("Choose what app you want to use: ");
+            ChoiceSelector();
         }
         
         public static void ChoiceSelector()
