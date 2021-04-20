@@ -21,7 +21,7 @@ namespace ConsoleAppProject
 
         private static StudentGrades grades = new StudentGrades();
 
-        public static void Start()
+        public static void Main()
         {
             Console.WriteLine("Welcome to ConsoleApp");
             Console.WriteLine("MADE BY: DANIILS PUCKO");
