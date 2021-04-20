@@ -21,7 +21,12 @@ namespace ConsoleAppProject.App01
         /// </summary>
         public void Run()
         {
-            ConsoleHelper.OutputHeading("Distance Converter");
+            Console.WriteLine("Welcome to Distance Converter");
+            Console.WriteLine("Made by Daniils Pucko");
+            Console.WriteLine("Choose what distance unit you want to convert: ");
+            Console.WriteLine("1. Miles");
+            Console.WriteLine("2. Feet");
+            Console.WriteLine("3. Metres");
             ChooseConverter();
         }
 
