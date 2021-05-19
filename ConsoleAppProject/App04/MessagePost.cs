@@ -12,6 +12,10 @@ namespace ConsoleAppProject.App04
     /// Michael Kölling and David J. Barnes
     /// version 0.1
     /// </author>
+    /// <modified>
+    /// Daniils Pucko
+    /// 16.05.2021
+    /// </modified>
     public class MessagePost
     {
         private int likes;
