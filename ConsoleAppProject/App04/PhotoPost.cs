@@ -15,20 +15,12 @@ namespace ConsoleAppProject.App04
     /// </author>
     public class PhotoPost
     {
-        // username of the post's author
-        public String Username { get; set; }
 
         // the name of the image file
         public String Filename { get; set; }
         
         // a one line image caption
-        public String Caption { get; set; }   
-        
-        public DateTime Timestamp { get; }
-
-        private int likes;
-        
-        private readonly  List<String> comments;
+        public String Caption { get; set; }           
 
         ///<summary>
         /// Constructor for objects of class PhotoPost.

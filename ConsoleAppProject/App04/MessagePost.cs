@@ -18,18 +18,8 @@ namespace ConsoleAppProject.App04
     /// </modified>
     public class MessagePost
     {
-        private int likes;
-
-        private readonly List<String> comments;
-
-
-        // username of the post's author
-        public String Username { get; }
-
         // an arbitrarily long, multi-line message
         public String Message { get; }
-
-        public DateTime Timestamp { get; }
 
         /// <summary>
         /// Constructor for objects of class MessagePost.
@@ -42,12 +32,7 @@ namespace ConsoleAppProject.App04
         /// </param>
         public MessagePost(String author, String text)
         {
-            Username = author;
             Message = text;
-            Timestamp = DateTime.Now;
-
-            likes = 0;
-            comments = new List<String>();
         }
 
         /// <summary>
