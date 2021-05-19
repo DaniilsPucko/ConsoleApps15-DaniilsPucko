@@ -44,6 +44,10 @@ namespace ConsoleAppProject.App04
             {
                 DisplayByAuthor();
             }
+            else if (choice == "8")
+            {
+                LikePost();
+            }
 
         }
 
@@ -123,7 +127,13 @@ namespace ConsoleAppProject.App04
 
         private void AddComent()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Adding a comment...");
+            Console.Write("Please enter post id: ");
+            string value = Console.ReadLine();
+            int id = Convert.ToInt32(value);
+
+            news.AddComment(id);
+            DisplayMenu();
         }
 
         private void LikePost()

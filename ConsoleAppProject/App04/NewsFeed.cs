@@ -119,6 +119,23 @@ namespace ConsoleAppProject.App04
             }
         }
 
+        public void AddComment(int id)
+        {
+            Post post = FindPost(id);
+
+            if (post == null)
+            {
+                Console.WriteLine("Post with id ", id, " does not exist.");
+            }
+            else
+            {
+                Console.WriteLine("Adding a comment...");
+                Console.Write("Please enter your comment: ");
+                string text = Console.ReadLine();
+                post.AddComment(text);
+            }
+        }
+
         ///<summary>
         /// Add a text post to the news feed.
         /// 
