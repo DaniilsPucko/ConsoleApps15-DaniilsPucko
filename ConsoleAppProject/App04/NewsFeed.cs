@@ -136,6 +136,38 @@ namespace ConsoleAppProject.App04
             }
         }
 
+        public void DisplayByTime(int time)
+        {
+            Post post = FindTime(time);
+
+            if (post == null)
+            {
+                Console.WriteLine("No posts in this period", time, "seconds; exist.");
+            }
+            else
+            {
+                Console.WriteLine("Displaying all posts for this period ", time, "seconds");
+                post.Display();
+            }
+        }
+
+        public Post FindTime(int time)
+        {
+            foreach (Post post in posts)
+            {
+                DateTime current = DateTime.Now;
+                TimeSpan timePast = current - post.Timestamp;
+                int seconds = (Int32)timePast.TotalSeconds;
+
+                if(seconds <= time)
+                {
+                    return post;
+                }
+            }
+
+            return null;
+        }
+
         ///<summary>
         /// Add a text post to the news feed.
         /// 

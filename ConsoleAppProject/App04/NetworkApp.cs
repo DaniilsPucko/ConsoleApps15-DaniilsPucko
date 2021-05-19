@@ -44,6 +44,10 @@ namespace ConsoleAppProject.App04
             {
                 DisplayByAuthor();
             }
+            else if (choice == "6")
+            {
+                DisplayByTime();
+            }
             else if(choice == "7")
             {
                 AddComment();
@@ -51,6 +55,15 @@ namespace ConsoleAppProject.App04
             else if (choice == "8")
             {
                 LikePost();
+            }
+            else if (choice == "9")
+            {
+                Console.WriteLine("Thank you for using our social network");
+            }
+            else
+            {
+                Console.WriteLine("No choice with this value exist.");
+                DisplayMenu();
             }
 
         }
@@ -120,13 +133,19 @@ namespace ConsoleAppProject.App04
             Console.Write("Please enter authors username: ");
             string username = Console.ReadLine();
 
-            news.FindAuthor(username);
+            news.DisplayAuthor(username);
             DisplayMenu();
         }
 
         private void DisplayByTime()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Displaying posts by time...");
+            Console.Write("Please enter time elapsed (in seconds) for a post: ");
+            string value = Console.ReadLine();
+            int time = Convert.ToInt32(value);
+
+            news.DisplayByTime(time);
+            DisplayMenu();
         }
 
         private void AddComment()
