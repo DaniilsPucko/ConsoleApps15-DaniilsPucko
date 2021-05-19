@@ -44,6 +44,10 @@ namespace ConsoleAppProject.App04
             {
                 DisplayByAuthor();
             }
+            else if(choice == "7")
+            {
+                AddComment();
+            }
             else if (choice == "8")
             {
                 LikePost();
@@ -125,7 +129,7 @@ namespace ConsoleAppProject.App04
             throw new NotImplementedException();
         }
 
-        private void AddComent()
+        private void AddComment()
         {
             Console.WriteLine("Adding a comment...");
             Console.Write("Please enter post id: ");
