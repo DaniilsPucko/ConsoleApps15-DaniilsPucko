@@ -103,6 +103,22 @@ namespace ConsoleAppProject.App04
             return null;
         }
 
+        public void LikePost(int id)
+        {
+            Post post = FindPost(id);
+
+            if (post == null)
+            {
+                Console.WriteLine("Post with id ", id, " does not exist.");
+            }
+            else
+            {
+                Console.WriteLine("Post has been liked.");
+                post.Like();
+                post.Display();
+            }
+        }
+
         ///<summary>
         /// Add a text post to the news feed.
         /// 

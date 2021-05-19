@@ -115,5 +115,25 @@ namespace ConsoleAppProject.App04
             news.FindAuthor(username);
             DisplayMenu();
         }
+
+        private void DisplayByTime()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void AddComent()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void LikePost()
+        {
+            Console.Write("Please enter post id: ");
+            string value = Console.ReadLine();
+            int id = Convert.ToInt32(value);
+
+            news.LikePost();
+            DisplayMenu();
+        }
     }
 }
