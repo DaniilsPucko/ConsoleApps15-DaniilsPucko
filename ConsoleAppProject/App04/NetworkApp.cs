@@ -6,6 +6,8 @@ namespace ConsoleAppProject.App04
 {
     class NetworkApp
     {
+        private NewsFeed news = new NewsFeed();
+
         public void DisplayMenu()
         {
             Console.WriteLine("Daniil's News Feed");
@@ -41,7 +43,7 @@ namespace ConsoleAppProject.App04
 
         private void DisplayAll()
         {
-            throw new NotImplementedException();
+            news.Display();
         }
 
         private void PostImage()

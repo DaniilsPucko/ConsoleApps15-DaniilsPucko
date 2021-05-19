@@ -22,6 +22,8 @@ namespace ConsoleAppProject
 
         private static StudentGrades grades = new StudentGrades();
 
+        private static NetworkApp app04 = new NetworkApp();
+
         public static void Main()
         {
             Console.WriteLine("Welcome to ConsoleApp");
@@ -49,6 +51,10 @@ namespace ConsoleAppProject
             else if (value == "3")
             {
                 grades.Run();
+            }
+            else if (value == "4")
+            {
+                app04.DisplayMenu();
             }
 
         }
