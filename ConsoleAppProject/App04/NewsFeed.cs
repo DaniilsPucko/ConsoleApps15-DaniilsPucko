@@ -28,6 +28,13 @@ namespace ConsoleAppProject.App04
         public NewsFeed()
         {
             posts = new List<Post>();
+
+            ///Adding test posts
+            MessagePost post = new MessagePost("Daniils", "I love Visual Studio 2019");
+            AddMessagePost(post);
+
+            PhotoPost photopost = new PhotoPost("Daniils", "photo1.jpg", "Programming in Visual Studio");
+            AddPhotoPost(photopost);
         }
 
 

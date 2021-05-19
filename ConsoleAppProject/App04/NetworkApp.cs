@@ -19,26 +19,23 @@ namespace ConsoleAppProject.App04
             Console.Write("Type your choice number: ");
             String choice = Console.ReadLine();
 
-            bool wantToQuit = false;
-            do
+            if (choice == "1")
             {
-                if (choice == "1")
-                {
 
-                }
-                else if (choice == "2")
-                {
+            }
+            else if (choice == "2")
+            {
 
-                }
-                else if (choice == "3")
-                {
+            }
+            else if (choice == "3")
+            {
+                DisplayAll();
+            }
+            else if (choice == "4")
+            {
 
-                }
-                else if (choice == "4")
-                {
-                    wantToQuit = true;
-                }
-            } while (!wantToQuit);
+            }
+
         }
 
         private void DisplayAll()
