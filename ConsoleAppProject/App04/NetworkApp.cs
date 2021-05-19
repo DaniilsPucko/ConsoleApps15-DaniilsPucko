@@ -40,6 +40,10 @@ namespace ConsoleAppProject.App04
             {
                 RemovePost();
             }
+            else if (choice == "5")
+            {
+                DisplayByAuthor();
+            }
 
         }
 
@@ -108,7 +112,8 @@ namespace ConsoleAppProject.App04
             Console.Write("Please enter authors username: ");
             string username = Console.ReadLine();
 
-            news.DisplayAuthor(username);
+            news.FindAuthor(username);
+            DisplayMenu();
         }
     }
 }
