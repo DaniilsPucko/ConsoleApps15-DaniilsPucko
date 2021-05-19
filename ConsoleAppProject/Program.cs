@@ -1,6 +1,7 @@
 ﻿using ConsoleAppProject.App01;
 using ConsoleAppProject.App02;
 using ConsoleAppProject.App03;
+using ConsoleAppProject.App04;
 using System;
 
 namespace ConsoleAppProject
@@ -34,6 +35,7 @@ namespace ConsoleAppProject
             Console.WriteLine("1. DISTANCE CONVERTER");
             Console.WriteLine("2. BODY MASS INDEX CALCULATOR");
             Console.WriteLine("3. STUDENT GRADES APPLICATION");
+            Console.WriteLine("4. SOCIAL NETWORK");
             Console.Write("Make your choice: ");
             string value = Console.ReadLine();
             if (value == "1")
@@ -44,10 +46,11 @@ namespace ConsoleAppProject
             {
                 calculator.Run();
             }
-            else if (value =="3")
+            else if (value == "3")
             {
                 grades.Run();
             }
+
         }
     }
 }
