@@ -75,6 +75,34 @@ namespace ConsoleAppProject.App04
             return null;
         }
 
+        public void DisplayAuthor(string username)
+        {
+            Post post = FindAuthor(username);
+
+            if (post == null)
+            {
+                Console.WriteLine("No posts from", username, " exist.");
+            }
+            else
+            {
+                Console.WriteLine("Displaying all posts from ", username);
+                post.Display();
+            }
+        }
+
+        public Post FindAuthor(string username)
+        {
+            foreach (Post post in posts)
+            {
+                if (post.Username == username)
+                {
+                    return post;
+                }
+            }
+
+            return null;
+        }
+
         ///<summary>
         /// Add a text post to the news feed.
         /// 

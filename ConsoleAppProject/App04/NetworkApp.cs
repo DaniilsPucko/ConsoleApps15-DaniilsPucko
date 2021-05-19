@@ -101,5 +101,14 @@ namespace ConsoleAppProject.App04
             news.RemovePost(id);
             DisplayMenu();
         }
+
+        private void DisplayByAuthor()
+        {
+            Console.WriteLine("Displaying authors posts...");
+            Console.Write("Please enter authors username: ");
+            string username = Console.ReadLine();
+
+            news.DisplayAuthor(username);
+        }
     }
 }
