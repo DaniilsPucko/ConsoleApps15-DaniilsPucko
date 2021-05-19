@@ -4,6 +4,9 @@ using System.Text;
 
 namespace ConsoleAppProject.App04
 {
+    /// <summary>
+    /// User console interface with choices.
+    /// </summary>
     class NetworkApp
     {
         private NewsFeed news = new NewsFeed();
@@ -68,6 +71,9 @@ namespace ConsoleAppProject.App04
 
         }
 
+        /// <summary>
+        /// Displays all posts
+        /// </summary>
         private void DisplayAll()
         {
             Console.WriteLine("Displaying all posts...");
@@ -75,6 +81,9 @@ namespace ConsoleAppProject.App04
             DisplayMenu();
         }
 
+        /// <summary>
+        /// Adds image post
+        /// </summary>
         private void PostImage()
         {
             Console.WriteLine("Posting an Image...");
@@ -97,6 +106,9 @@ namespace ConsoleAppProject.App04
             DisplayMenu();
         }
 
+        /// <summary>
+        /// Adds message post.
+        /// </summary>
         private void PostMessage()
         {
             Console.WriteLine("Posting a message...");
@@ -116,6 +128,9 @@ namespace ConsoleAppProject.App04
             DisplayMenu();
         }
 
+        /// <summary>
+        /// Removes post.
+        /// </summary>
         private void RemovePost()
         {
             Console.WriteLine("Removing a post...");
@@ -127,6 +142,9 @@ namespace ConsoleAppProject.App04
             DisplayMenu();
         }
 
+        /// <summary>
+        /// Displays 1 author's posts
+        /// </summary>
         private void DisplayByAuthor()
         {
             Console.WriteLine("Displaying authors posts...");
@@ -137,6 +155,9 @@ namespace ConsoleAppProject.App04
             DisplayMenu();
         }
 
+        /// <summary>
+        /// Displays all posts for particular time
+        /// </summary>
         private void DisplayByTime()
         {
             Console.WriteLine("Displaying posts by time...");
@@ -148,6 +169,9 @@ namespace ConsoleAppProject.App04
             DisplayMenu();
         }
 
+        /// <summary>
+        /// Adds a comment to post
+        /// </summary>
         private void AddComment()
         {
             Console.WriteLine("Adding a comment...");
@@ -159,6 +183,9 @@ namespace ConsoleAppProject.App04
             DisplayMenu();
         }
 
+        /// <summary>
+        /// Adds a like to a post.
+        /// </summary>
         private void LikePost()
         {
             Console.Write("Please enter post id: ");

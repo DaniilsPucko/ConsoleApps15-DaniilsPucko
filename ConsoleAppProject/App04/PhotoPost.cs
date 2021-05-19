@@ -13,6 +13,10 @@ namespace ConsoleAppProject.App04
     /// Michael Kölling and David J. Barnes
     /// @version 0.1
     /// </author>
+    /// <modified>
+    /// Daniils Pucko
+    /// 16.05.2021
+    /// </modified>
     public class PhotoPost : Post
     {
 
@@ -40,6 +44,9 @@ namespace ConsoleAppProject.App04
             this.Caption = caption;
         }
 
+        /// <summary>
+        /// Displays photopost
+        /// </summary>
         public override void Display()
         {
             Console.WriteLine($"    Filename: [{Filename}]");

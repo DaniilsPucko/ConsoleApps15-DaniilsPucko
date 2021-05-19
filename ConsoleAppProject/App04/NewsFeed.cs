@@ -18,6 +18,10 @@ namespace ConsoleAppProject.App04
     ///  Michael Kölling and David J. Barnes
     ///  version 0.1
     ///</author> 
+    ///<modified>
+    ///Daniils Pucko
+    ///16.05.2021
+    /// </modified>
     public class NewsFeed
     {
         private readonly List<Post> posts;
@@ -37,6 +41,10 @@ namespace ConsoleAppProject.App04
             AddPhotoPost(photopost);
         }
 
+        /// <summary>
+        /// Finds and removes post from list of posts.
+        /// </summary>
+        /// <param name="id"></param>
         public void RemovePost(int id)
         {
             Post post = FindPost(id);
@@ -62,6 +70,11 @@ namespace ConsoleAppProject.App04
             }
         }
 
+        /// <summary>
+        /// Finds post by id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public Post FindPost(int id)
         {
             foreach (Post post in posts)
@@ -75,6 +88,10 @@ namespace ConsoleAppProject.App04
             return null;
         }
 
+        /// <summary>
+        /// Displays posts for particular author
+        /// </summary>
+        /// <param name="username"></param>
         public void DisplayAuthor(string username)
         {
             Post post = FindAuthor(username);
@@ -90,6 +107,11 @@ namespace ConsoleAppProject.App04
             }
         }
 
+        /// <summary>
+        /// Searches for a posts from particular author
+        /// </summary>
+        /// <param name="username"></param>
+        /// <returns></returns>
         public Post FindAuthor(string username)
         {
             foreach (Post post in posts)
@@ -103,6 +125,10 @@ namespace ConsoleAppProject.App04
             return null;
         }
 
+        /// <summary>
+        /// Likes post with particular id
+        /// </summary>
+        /// <param name="id"></param>
         public void LikePost(int id)
         {
             Post post = FindPost(id);
@@ -119,6 +145,10 @@ namespace ConsoleAppProject.App04
             }
         }
 
+        /// <summary>
+        /// Adds a comment to a post with particular id
+        /// </summary>
+        /// <param name="id"></param>
         public void AddComment(int id)
         {
             Post post = FindPost(id);
@@ -136,6 +166,10 @@ namespace ConsoleAppProject.App04
             }
         }
 
+        /// <summary>
+        /// Displays all posts for particular time.
+        /// </summary>
+        /// <param name="time"></param>
         public void DisplayByTime(int time)
         {
             Post post = FindTime(time);
@@ -151,6 +185,11 @@ namespace ConsoleAppProject.App04
             }
         }
 
+        /// <summary>
+        /// Searches for posts made in particular time.
+        /// </summary>
+        /// <param name="time"></param>
+        /// <returns></returns>
         public Post FindTime(int time)
         {
             foreach (Post post in posts)
