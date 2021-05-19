@@ -132,7 +132,7 @@ namespace ConsoleAppProject.App04
             string value = Console.ReadLine();
             int id = Convert.ToInt32(value);
 
-            news.LikePost();
+            news.LikePost(id);
             DisplayMenu();
         }
     }
