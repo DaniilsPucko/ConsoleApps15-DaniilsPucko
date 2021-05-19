@@ -15,7 +15,12 @@ namespace ConsoleAppProject.App04
             Console.WriteLine("1. Post message");
             Console.WriteLine("2. Post image");
             Console.WriteLine("3. Display All posts");
-            Console.WriteLine("4. Quit");
+            Console.WriteLine("4. Remove Post");
+            Console.WriteLine("5. Display by Author");
+            Console.WriteLine("6. Display by Date");
+            Console.WriteLine("7. Add Comment");
+            Console.WriteLine("8. Like post");
+            Console.WriteLine("9. Quit");
             Console.Write("Type your choice number: ");
             String choice = Console.ReadLine();
 
@@ -40,17 +45,55 @@ namespace ConsoleAppProject.App04
 
         private void DisplayAll()
         {
+            Console.WriteLine("Displaying all posts...");
             news.Display();
         }
 
         private void PostImage()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Posting an Image...");
+
+            Console.Write("Type your username: ");
+            string author = Console.ReadLine();
+
+            Console.Write("Please enter your image filename: ");
+            string filename = Console.ReadLine();
+
+            Console.Write("Please enter your image caption: ");
+            string caption = Console.ReadLine();
+
+            PhotoPost post = new PhotoPost(author, filename, caption);
+            news.AddPhotoPost(post);
+
+            Console.WriteLine("You have succesfully posted a photo.");
+            post.Display();
         }
 
         private void PostMessage()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Posting a message...");
+            
+            Console.Write("Type your username: ");
+            string author = Console.ReadLine();
+
+            Console.Write("Please enter your message: ");
+            string message = Console.ReadLine();
+
+            MessagePost post = new MessagePost(author, message);
+            news.AddMessagePost(post);
+
+            Console.WriteLine("You have succesfully posted a message.");
+            post.Display();
+        }
+
+        private void RemovePost()
+        {
+            Console.WriteLine("Removing a post...");
+            Console.Write("Please enter your post id: ");
+            string value = Console.ReadLine();
+            int id = Convert.ToInt32(value);
+
+            news.RemovePost(id);
         }
     }
 }

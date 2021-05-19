@@ -6,6 +6,10 @@ namespace ConsoleAppProject.App04
 {
     public class Post
     {
+        public int PostId;
+
+        public static int instances = 0;
+
         private int likes;
 
         private readonly List<String> comments;
@@ -18,9 +22,11 @@ namespace ConsoleAppProject.App04
         /// <summary>
         /// Constructor of Post class.
         /// </summary>
-        /// <param name="author"></param>
         public Post(string author)
         {
+            instances++;
+            PostId = instances;
+
             this.Username = author;
             Timestamp = DateTime.Now;
 

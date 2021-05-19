@@ -37,6 +37,43 @@ namespace ConsoleAppProject.App04
             AddPhotoPost(photopost);
         }
 
+        public void RemovePost(int id)
+        {
+            Post post = FindPost(id);
+
+            if (post == null)
+            {
+                Console.WriteLine("Post with id: ", id, " does not exist");
+            }
+            else
+            {
+                Console.WriteLine("This post has been removed: ");
+
+                if (post is MessagePost mp)
+                {
+                    mp.Display();
+                }
+                else if (post is PhotoPost pp)
+                {
+                    pp.Display();
+                }
+
+                posts.Remove(post);
+            }
+        }
+
+        public Post FindPost(int id)
+        {
+            foreach (Post post in posts)
+            {
+                if (post.PostId == id)
+                {
+                    return post;
+                }
+            }
+
+            return null;
+        }
 
         ///<summary>
         /// Add a text post to the news feed.
