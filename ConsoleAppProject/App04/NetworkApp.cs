@@ -26,11 +26,11 @@ namespace ConsoleAppProject.App04
 
             if (choice == "1")
             {
-
+                PostMessage();
             }
             else if (choice == "2")
             {
-
+                PostImage();
             }
             else if (choice == "3")
             {
@@ -38,7 +38,7 @@ namespace ConsoleAppProject.App04
             }
             else if (choice == "4")
             {
-
+                RemovePost();
             }
 
         }
@@ -47,6 +47,7 @@ namespace ConsoleAppProject.App04
         {
             Console.WriteLine("Displaying all posts...");
             news.Display();
+            DisplayMenu();
         }
 
         private void PostImage()
@@ -67,6 +68,8 @@ namespace ConsoleAppProject.App04
 
             Console.WriteLine("You have succesfully posted a photo.");
             post.Display();
+
+            DisplayMenu();
         }
 
         private void PostMessage()
@@ -84,6 +87,8 @@ namespace ConsoleAppProject.App04
 
             Console.WriteLine("You have succesfully posted a message.");
             post.Display();
+
+            DisplayMenu();
         }
 
         private void RemovePost()
@@ -94,6 +99,7 @@ namespace ConsoleAppProject.App04
             int id = Convert.ToInt32(value);
 
             news.RemovePost(id);
+            DisplayMenu();
         }
     }
 }
