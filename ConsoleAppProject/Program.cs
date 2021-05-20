@@ -32,6 +32,14 @@ namespace ConsoleAppProject
             }
         }
 
+        public static StudentGrades StudentGrades
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
         public static void Main()
         {
             Console.WriteLine("Welcome to ConsoleApp");
