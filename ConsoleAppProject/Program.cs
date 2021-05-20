@@ -24,6 +24,14 @@ namespace ConsoleAppProject
 
         private static NetworkApp app04 = new NetworkApp();
 
+        public static BMI BMI
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
         public static void Main()
         {
             Console.WriteLine("Welcome to ConsoleApp");
